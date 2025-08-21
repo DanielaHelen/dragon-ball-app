@@ -1,5 +1,5 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { Character } from "../../domain/types";
+import { Character } from "../../domain/character/types";
 import { ApiResponse } from "../types";
 import { getCharacterById, getCharacters } from "./api";
 
@@ -10,7 +10,7 @@ const CHARACTER_ID_KEY = "getCharacterById";
 export const useCharacters = (filterName?: string) => {
 
     const characterAdapter = (response: ApiResponse | Character[], pageParam: number) => {
-    
+
         if ("items" in response) {
             const { items, meta } = response;
             const pageSize = 27;
@@ -36,7 +36,7 @@ export const useCharacters = (filterName?: string) => {
         queryKey: [CHARACTERS_KEY, filterName],
         queryFn: async ({ pageParam = 1 }: { pageParam?: number }) => {
             const data = await getCharacters(filterName);
-           
+
             return characterAdapter(data.data, pageParam);
         },
         getNextPageParam: (lastPage?: { nextPage: number, totalPages: number }) => {

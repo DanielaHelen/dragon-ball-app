@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { CharacterDetail } from "../../domain/types";
+import { CharacterDetail } from "../../domain/character/types";
 import config from "../config";
 import { ApiResponse } from "../types";
 

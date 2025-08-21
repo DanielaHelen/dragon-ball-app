@@ -1,4 +1,4 @@
-import { Character } from "../domain/types";
+import { Character } from "../domain/character/types";
 
 export type Meta = {
     totalItems: number;
