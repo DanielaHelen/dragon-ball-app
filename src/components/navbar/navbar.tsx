@@ -20,7 +20,7 @@ const Navbar = () => {
                 <img src={logo} alt='Logo' />
             </div>
             <div className={`${className}-favorites`}>
-                <div className={`${className}-icon`}><ButtonFavorite icon={icon} onClick={() => setShowFavorites(!showFavorites)} /></div>
+                <div className={`${className}-icon`}><ButtonFavorite icon={icon} onClick={() => { setShowFavorites(!showFavorites); navigate("/"); }} /></div>
                 <div className={`${className}-text`}>{favorites.length}</div>
             </div>
         </nav>
