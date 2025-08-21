@@ -1,0 +1,64 @@
+$typograpy-font-family: 'Roboto', sans-serif;
+
+//weight
+$typograpy-font-weight-regular: 400;
+$typograpy-font-weight-medium: 500;
+$typograpy-font-weight-bold: 700;
+
+//size
+$typograpy-font-size-xs: 12px;
+$typograpy-font-size-s: 14px;
+$typograpy-font-size-m: 16px;
+$typograpy-font-size-l: 32px;
+$typograpy-font-size-xl: 40px;
+
+//line-height
+$typograpy-line-height: 100%;
+
+//letter-spacing
+$typograpy-letter-spacing: 0;
+
+@mixin font-family() {
+    font-family: $typograpy-font-family;
+}
+
+@mixin font-default() {
+    line-height: $typograpy-line-height;
+    letter-spacing: $typograpy-letter-spacing;
+}
+
+@mixin font-detail() {
+    font-size: $typograpy-font-size-xs;
+    font-weight: $typograpy-font-weight-regular;
+    @include font-default();
+}
+
+@mixin font-body-regular() {
+    font-size: $typograpy-font-size-m;
+    font-weight: $typograpy-font-weight-regular;
+    @include font-default();
+}
+
+@mixin font-body-medium() {
+    font-size: $typograpy-font-size-m;
+    font-weight: $typograpy-font-weight-medium;
+    @include font-default();
+}
+
+@mixin font-label() {
+    font-size: $typograpy-font-size-s;
+    font-weight: $typograpy-font-weight-regular;
+    @include font-default();
+}
+
+@mixin font-title() {
+    font-size: $typograpy-font-size-l;
+    font-weight: $typograpy-font-weight-bold;
+    @include font-default();
+}
+
+@mixin font-title-l() {
+    font-size: $typograpy-font-size-xl;
+    font-weight: $typograpy-font-weight-bold;
+    @include font-default();
+}
