@@ -1,0 +1,15 @@
+.button-favorite {
+    cursor: pointer;
+    &-icon {
+        width: 24px;
+            height: 24px;
+    }
+
+    &-small {
+        cursor: pointer;
+        &-icon {
+            width: 16px;
+                height: 16px;
+        }
+    }
+}
