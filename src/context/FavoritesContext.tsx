@@ -12,7 +12,6 @@ const FavoritesContext = createContext<{
 const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [favorites, setFavorites] = useState<string[]>(JSON.parse(localStorage.getItem("favorites") || "[]"));
     const [showFavorites, setShowFavorites] = useState(false);
-    console.log(showFavorites);
     const removeFavorite = (id: string) => {
         const newFavorites = favorites.filter(fav => fav !== id);
         setFavorites(newFavorites);
