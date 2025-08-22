@@ -1,5 +1,5 @@
-import { describe, it, expect, vi } from 'vitest';
-import { fireEvent, prettyDOM, screen } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { renderWithProviders } from '../../../test-utils';
 import Search from './search';
 
