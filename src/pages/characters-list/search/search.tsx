@@ -41,8 +41,9 @@ const Search: FC<SearchProps> = (props: SearchProps) => {
                     placeholder='SEARCH A CHARACTER...'
                     className={`${className}-input`}
                     onChange={handleInputChange}
-                    onFocus={(e) => (e.target.placeholder = "")} 
-                    onBlur={(e) => (e.target.placeholder = "SEARCH A CHARACTER...")} 
+                    onFocus={(e) => (e.target.placeholder = "")}
+                    onBlur={(e) => (e.target.placeholder = "SEARCH A CHARACTER...")}
+                    data-testid="search-input"
                 />
                 <div className={`${className}__clear-icon-wrapper`} onClick={handleClearClick}>
                     <img className={`${className}__clear-icon`} src={clearIcon} />
