@@ -10,7 +10,7 @@ const Navbar = () => {
     const className = "navbar";
     const navigate = useNavigate();
     const { favorites, setShowFavorites, showFavorites } = useFavorites();
-    const icon = favorites.length > 0 ? iconHeart : hearEmpty;
+    const icon = favorites.length > 0 ? { iconImg: iconHeart, iconName: "iconheart" } : { iconImg: hearEmpty, iconName: "iconhearEmpty" };
     return (
         <nav className={className}>
             <div className={`${className}-logo`} onClick={() => {
