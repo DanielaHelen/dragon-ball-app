@@ -1,6 +1,6 @@
 import { fireEvent } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { renderWithProviders } from '../../../test-utils';
+import { renderWithProviders } from '../../../../config/test-utils';
 import Search from './search';
 
 

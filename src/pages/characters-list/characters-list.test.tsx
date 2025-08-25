@@ -1,8 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { renderWithProviders } from '../../test-utils';
+import { renderWithProviders } from '../../../config/test-utils';
 import CharactersList from './characters-list';
-import { useCharacters } from '../../services/api/api-hooks';
 
 
 const mockCharacters = [
