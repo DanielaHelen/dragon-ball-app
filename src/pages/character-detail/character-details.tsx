@@ -16,7 +16,7 @@ const CharacterDetails = () => {
     const classNameTransform = `${className}-transform`;
     const { favorites, addFavorite, removeFavorite } = useFavorites();
 
-    const { isFavorite, icon } = character?.id && favorites.includes(character?.id) ? { isFavorite: true, icon: iconHeart } : { isFavorite: false, icon: iconHeartEmpty };
+    const { isFavorite, icon } = character?.id && favorites.includes(character?.id) ? { isFavorite: true, icon: { iconImg: iconHeart, iconName: "iconheart" }, } : { isFavorite: false, icon: { iconImg: iconHeartEmpty, iconName: "iconheartempty" } };
     const handleClick = () => {
         if (character?.id) {
             if (isFavorite) {

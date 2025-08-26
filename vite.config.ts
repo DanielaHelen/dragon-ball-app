@@ -14,5 +14,10 @@ export default defineConfig({
     include: ["**/*.test.js", "**/*.test.ts", "**/*.test.jsx", "**/*.test.tsx"],
     exclude: ["**/node_modules/**"],
     setupFiles: ['./config/vitest-setup.ts'],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json", "html"],
+      include: ["src/**/*.{js,jsx,ts,tsx}"],
+    },
   }
 })

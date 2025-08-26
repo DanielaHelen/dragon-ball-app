@@ -12,7 +12,7 @@ const Card = (props: Character) => {
     const navigation = useNavigate();
     const { favorites, addFavorite, removeFavorite } = useFavorites();
 
-    const { isFavorite, icon } = favorites.includes(id) ? { isFavorite: true, icon: iconHeart } : { isFavorite: false, icon: heartEmpty };
+    const { isFavorite, icon } = favorites.includes(id) ? { isFavorite: true, icon: { iconImg: iconHeart, iconName: "iconheart" } } : { isFavorite: false, icon: { iconImg: heartEmpty, iconName: "iconheartempty" } };
 
     const handleClick = () => {
         if (id) {
