@@ -11,7 +11,7 @@ const Navbar = () => {
     const className = "navbar";
     const navigate = useNavigate();
     const { favorites, setShowFavorites, showFavorites } = useFavorites();
-    const icon = favorites.length > 0 ? { iconImg: iconHeart, iconName: "iconheart" } : { iconImg: hearEmpty, iconName: "iconhearEmpty" };
+    const icon = favorites.length > 0 ? { iconImg: iconHeart, iconName: "iconheart" } : { iconImg: hearEmpty, iconName: "iconheartEmpty" };
     return (
         <nav className={className}>
             <Link
