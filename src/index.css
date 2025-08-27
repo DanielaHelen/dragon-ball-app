@@ -10,7 +10,8 @@
 
 body {
   min-height: 100vh;
-
+  /* Quita el scroll vertical */
+  overflow-y: hidden;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -38,10 +39,10 @@ h3,
 h4,
 h5,
 h6 {
-  /* 
-     * Permite que las palabras largas se dividan y ajusten a la siguiente línea 
-     * si exceden el ancho del contenedor. Esto evita problemas de desbordamiento 
-     * y mejora la legibilidad en dispositivos con pantallas pequeñas o en casos 
+  /*
+     * Permite que las palabras largas se dividan y ajusten a la siguiente línea
+     * si exceden el ancho del contenedor. Esto evita problemas de desbordamiento
+     * y mejora la legibilidad en dispositivos con pantallas pequeñas o en casos
      * de contenido dinámico.
      */
   overflow-wrap: break-word;

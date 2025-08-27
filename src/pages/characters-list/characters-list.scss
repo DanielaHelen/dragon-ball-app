@@ -11,7 +11,7 @@ $compClass: "characters-list";
 
     &__cards-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(189px, 1fr));
         gap: 16px;
     }
 
@@ -29,8 +29,10 @@ $compClass: "characters-list";
         padding-bottom: 24px;
     }
 
-    &__end {
+    &__end, &__loading {
+        padding: 10px 0;
         display: flex;
+        align-items: center;
         justify-content: center;
     }
 
@@ -39,10 +41,10 @@ $compClass: "characters-list";
 
 
 // mobile
-@media (max-width: 393px) {
+@media (max-width: 425px) {
     .#{$compClass} {
         &__wrapper {
-            padding: 24px 16px;
+            padding: 16px;
         }
 
         &__cards-list {
