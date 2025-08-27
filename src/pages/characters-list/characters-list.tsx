@@ -56,7 +56,7 @@ const CharactersList = () => {
                 )}
                 {isError && <div className={`${className}__error`}>Error loading characters</div>}
             </div>
-            {!hasNextPage && !isLoading && !showFavorites && <div className={`${className}__end`} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>No more characters</div>}
+            {!hasNextPage && !isLoading && !showFavorites && <div className={`${className}__end`} >No more characters</div>}
         </div>
     );
 };
