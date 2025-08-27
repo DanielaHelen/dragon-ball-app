@@ -1,8 +1,7 @@
-import { describe, it, vi, expect } from 'vitest';
 import { fireEvent, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 import { renderWithProviders } from '../../../config/test-utils';
 import Navbar from './navbar';
-import CharactersList from '../../pages/characters-list/characters-list';
 
 // Mock data and dependencies
 vi.mock('react-router-dom', async () => {
@@ -54,7 +53,6 @@ describe('Navbar component', () => {
         renderWithProviders(<Navbar />);
         const favButton = screen.getByRole('button');
         fireEvent.click(favButton);
-        screen.debug();
         expect(setShowFavoritesMock).toHaveBeenCalledWith(true);
     });
     it('shows icon when no are favorites', () => {
