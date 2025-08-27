@@ -1,7 +1,7 @@
-import icon from "../../../assets/icons/search-icon.svg";
+import { ChangeEvent, FC, useEffect, useRef } from "react";
 import clearIcon from "../../../assets/icons/clear.svg";
+import icon from "../../../assets/icons/search-icon.svg";
 import "./search.scss";
-import { ChangeEvent, FC, use, useEffect, useRef } from "react";
 
 interface SearchProps {
     onSearch?: (query: string) => void;
