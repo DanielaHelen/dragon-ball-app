@@ -138,10 +138,6 @@ src/
 
 ## 🚀 Deploy
 
-The application is automatically deployed to **GitHub Pages** via:
+The application is deployed using **Vercel**.
 
-```bash
-npm run deploy
-```
-
-**Production URL**: [https://danielahelen.github.io/dragon-ball-app](https://danielahelen.github.io/dragon-ball-app)
+**Production URL**: [https://dragon-ball-app-danielahelen.vercel.app](https://dragon-ball-app-black.vercel.app/)
