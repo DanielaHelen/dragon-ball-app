@@ -1,4 +1,4 @@
-# 🐉 Dragon Ball App
+# 🟠🔥💫 Dragon Ball App
 
 A modern web application to explore the Dragon Ball universe, built with React and TypeScript. Discover characters, their transformations, and maintain a favorites list.
 
