@@ -10,8 +10,6 @@
 
 body {
   min-height: 100vh;
-  /* Quita el scroll vertical */
-  overflow-y: hidden;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
