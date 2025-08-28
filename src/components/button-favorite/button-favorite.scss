@@ -1,0 +1,23 @@
+.button-favorite {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &-small {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        &-icon {
+            width: 12px;
+            height: 11px;
+        }
+    }
+}

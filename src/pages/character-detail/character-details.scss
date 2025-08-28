@@ -1,0 +1,178 @@
+@use "../../assets/fonts/typography/tokens.scss" as *;
+
+$compClass: "character-details";
+
+.#{$compClass} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-top: 0.5px solid grey;
+    overflow: hidden;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; // Centra horizontal y verticalmente el contenido
+        width: 100%;
+        height: 320px;
+        background-color: black;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-color: transparent #ffffff transparent transparent;
+            border-style: solid;
+            border-width: 25px 25px 0 0;
+            bottom: 515px;
+            right: 0;
+            top: auto;
+
+        }
+
+        &__content {
+            display: flex;
+            gap: 16px;
+            height: 100%;
+            width: 100%;
+            max-width: 979px;
+
+            &-image {
+                width: 320px;
+                height: 100%;
+                object-fit: contain;
+                // filter: drop-shadow(0px 4px 4px #582323);
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                height: 100%;
+                color: white;
+                padding: 48px;
+                width: 640px;
+
+                .#{$compClass}-header {
+                    &__title-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between; // Alinea el título al inicio horizontalmente
+                        width: 100%; // Asegura que ocupe todo el ancho del contenedor
+                    }
+
+                    &__description {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4; // Limita el texto a 3 líneas
+                        line-clamp: 4; // Propiedad estándar para compatibilidad
+                        -webkit-box-orient: vertical; // Asegura que el texto se muestre en vertical
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-align: justify;
+                        color: #ffffff;
+                        width: 100%;
+                        min-height: 60px;
+                        @include font-body-regular();
+                    }
+
+                }
+            }
+
+        }
+
+        &__title {
+            @include font-title-l();
+            text-transform: uppercase;
+        }
+    }
+
+    &-transform {
+        display: flex;
+        padding: 48px 0;
+        max-width: 100%;
+        justify-content: center; // Centrar la sección
+        overflow-x: hidden;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            max-width: 979px;
+        }
+
+        &__title {
+            @include font-title();
+            text-transform: uppercase;
+        }
+
+        &__cards {
+            display: flex;
+            gap: 24px;
+            overflow: auto;
+            width: 100%;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 5px;
+                background-color: #f1f1f1;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #ff0000;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 425px) {
+    .#{$compClass} {
+        &-header {
+            height: 600px;
+
+            &::before {
+                bottom: 158px;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                &-image {
+                    height: 50%;
+                    align-self: center;
+                    justify-self: center;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                &-info {
+                    padding: 24px 16px 48px 16px;
+                    width: 100%
+                }
+            }
+
+            &__description {
+                display: -webkit-box;
+                -webkit-line-clamp: 4; // Limita el texto a 3 líneas
+                line-clamp: 4; // Propiedad estándar para compatibilidad
+                -webkit-box-orient: vertical; // Asegura que el texto se muestre en vertical
+                width: 100%;
+                height: 100px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &-transform {
+            padding: 48px 16px;
+        }
+
+    }
+}
