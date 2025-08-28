@@ -9,8 +9,6 @@ $compClass: "character-details";
     width: 100%;
     border-top: 0.5px solid grey;
     overflow: hidden;
-    // max-height: 90vh;
-
 
     &-header {
         display: flex;
@@ -92,7 +90,7 @@ $compClass: "character-details";
     &-transform {
         display: flex;
         padding: 48px 0;
-        width: 100%;
+        max-width: 100%;
         justify-content: center; // Centrar la sección
         overflow-x: hidden;
 
@@ -132,7 +130,7 @@ $compClass: "character-details";
 
 }
 
-@media (max-width: 393px) {
+@media (max-width: 425px) {
     .#{$compClass} {
         &-header {
             height: 600px;
@@ -148,11 +146,15 @@ $compClass: "character-details";
 
                 &-image {
                     height: 50%;
+                    align-self: center;
+                    justify-self: center;
+                    display: block;
+                    margin: 0 auto;
                 }
 
                 &-info {
                     padding: 24px 16px 48px 16px;
-                    width: 91%;
+                    width: 100%
                 }
             }
 
@@ -166,6 +168,10 @@ $compClass: "character-details";
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+        }
+
+        &-transform {
+            padding: 48px 16px;
         }
 
     }

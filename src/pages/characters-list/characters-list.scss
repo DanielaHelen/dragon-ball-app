@@ -35,6 +35,10 @@ $compClass: "characters-list";
         align-items: center;
         justify-content: center;
     }
+    &-results{
+        @include font-detail();
+        text-transform: uppercase;
+    }
 
 
 }
